@@ -1,0 +1,135 @@
+:root {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  color: #1a1a1a;
+  background: #f4f1ea;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 32px 16px;
+}
+
+.cart {
+  width: min(640px, 100%);
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+.cart h1 {
+  margin: 0 0 8px;
+  font-size: 1.6rem;
+}
+
+.hint {
+  margin: 0 0 20px;
+  color: #5c5c5c;
+  font-size: 0.95rem;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 12px;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.item-name {
+  font-weight: 600;
+}
+
+.item-price {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.qty-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.qty-controls button {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #ccc;
+  background: #fafafa;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.line-total {
+  min-width: 88px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.promo {
+  display: flex;
+  gap: 8px;
+  margin: 20px 0;
+}
+
+.promo input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.promo button,
+.qty-controls button:hover {
+  background: #ececec;
+}
+
+.promo button {
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 8px;
+  background: #1f4d3a;
+  color: #fff;
+  cursor: pointer;
+}
+
+.totals {
+  display: grid;
+  gap: 8px;
+  font-variant-numeric: tabular-nums;
+}
+
+.totals .row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.totals .total {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #eee;
+}
+
+.promo-status {
+  margin: 0 0 12px;
+  font-size: 0.9rem;
+  color: #1f4d3a;
+}
+
+.promo-status.error {
+  color: #8a1f1f;
+}
